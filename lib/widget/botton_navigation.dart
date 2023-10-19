@@ -20,11 +20,14 @@ class _TrackerBottonBarState extends State<TrackerBottonBar> {
     return <Widget>[const Tracker(), const TrackerList()];
   }
 
-  void _onItemTapped(int index) {
+void _onItemTapped(int index) {
+  Future.microtask(() {
     setState(() {
       _selectedIndex = index;
     });
-  }
+  });
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +44,7 @@ class _TrackerBottonBarState extends State<TrackerBottonBar> {
       body: Center(
         child: getWidgetOptions().elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(elevation: 9,
         backgroundColor: GlobalVariables.backgroundColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -62,7 +65,9 @@ class _TrackerBottonBarState extends State<TrackerBottonBar> {
       floatingActionButton: _selectedIndex == 0
           ? FloatingActionButton(
               backgroundColor: Colors.yellow,
-              onPressed: provider.addTimestamp,
+              onPressed: 
+              
+              provider.addTimestamp,
               child: const Icon(
                 Icons.add,
                 color: Colors.black,
