@@ -151,6 +151,13 @@ double averageMinutesBetweenTimestampsForDay(String day) {
   return totalDifference / (timestampsForDay.length - 1);
     
 }
-
+Future<bool> isFirstTime() async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  bool isFirstTime = prefs.getBool('first_time') ?? true;
+  if (isFirstTime) {
+    prefs.setBool('first_time', false);
+  }
+  return isFirstTime;
+}
   
 }

@@ -41,11 +41,11 @@ class _TrackerState extends State<Tracker> {
           difference =
               '${provider.timestamps[index]!.difference(provider.timestamps[index + 1]!).inMinutes} min';
         }
-        return Card(
+        return Card(elevation: 9,
           color: const Color.fromARGB(255, 2, 28, 41),
           child: ListTile(
             title: Text(
-              DateFormat(' dd.MM.yyyy').format(timestamp!),
+              DateFormat('dd.MM.yyyy - HH:mm').format(timestamp!),
               style: const TextStyle(color: Colors.grey),
             ),
             subtitle: Text(
