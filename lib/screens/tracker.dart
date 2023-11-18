@@ -42,6 +42,7 @@ class _TrackerState extends State<Tracker> {
               '${provider.timestamps[index]!.difference(provider.timestamps[index + 1]!).inMinutes} min';
         }
         return Card(elevation: 9,
+        shadowColor: Colors.blueGrey.shade800,
           color: const Color.fromARGB(255, 2, 28, 41),
           child: ListTile(
             title: Text(
@@ -55,7 +56,7 @@ class _TrackerState extends State<Tracker> {
             trailing: IconButton(
               icon: Icon(
                 Icons.delete,
-                color: Colors.red.shade900,
+                color: Colors.yellow.shade900,
               ),
               onPressed: () async {
                 bool shouldDelete = await provider.confirmDelete(context);

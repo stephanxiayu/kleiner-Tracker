@@ -37,16 +37,16 @@ class MyApp extends StatelessWidget {
               return OnboardingPage(
                 pages: [
                   OnboardingPageModel(
-                    title: 'Tracke deine Aktioen',
-                    description: 'Tracke deine Aktionen und die Zeit',
-                    image: 'assets/anzahl1.png',
+                    title: 'Tracke deine Aktionen',
+                    description: 'Tracke deine Toilettengänge und die Zeit',
+                    image: 'assets/anzahl2.png',
                     bgColor: GlobalVariables.backgroundColor,
                   ),
                   OnboardingPageModel(
                     title: 'Anzahl und Durchschnitt',
                     description:
                         'Sehe die Anzahl pro Tag und die durchschnittliche Zeit',
-                    image: 'assets/bild2.png',
+                    image: 'assets/anzahl3.png',
                     bgColor: GlobalVariables.backgroundColor,
                   ),
                 ],

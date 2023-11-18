@@ -40,6 +40,7 @@ class OnboardingPageState extends State<OnboardingPage> {
         child: SafeArea(
           child: Column(
             children: [
+            
               Expanded(
                 // Pageview to render each page
                 child: PageView.builder(
@@ -55,6 +56,7 @@ class OnboardingPageState extends State<OnboardingPage> {
                     final item = widget.pages[idx];
                     return Column(
                       children: [
+                         
                         Expanded(
                           flex: 3,
                           child: Padding(

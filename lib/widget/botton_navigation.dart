@@ -34,7 +34,7 @@ void _onItemTapped(int index) {
     var provider = Provider.of<TrackerProvider>(context, listen: true);
     return Scaffold(
       backgroundColor: GlobalVariables.backgroundColor,
-      appBar: AppBar(
+      appBar: AppBar(elevation: 9,
         title: Text(
           'Toilettengänge heute: ${provider.countTodayVisits()}',
           style: const TextStyle(color: Colors.grey),
