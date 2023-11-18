@@ -64,7 +64,8 @@ class _TrackerState extends State<Tracker> {
               return Colors.blueGrey.shade800; // Standard-Schattenfarbe
             })(),
             color: const Color.fromARGB(255, 2, 28, 41),
-            child: Container(decoration: BoxDecoration(border: Border.all(color:  index + 1 < provider.timestamps.length && provider.timestamps[index]!.difference(provider.timestamps[index + 1]!).inHours >= 3 ? Colors.green : Colors.transparent,)),
+            child: Container(decoration: BoxDecoration(border: Border.all(width: 3,
+              color:  index + 1 < provider.timestamps.length && provider.timestamps[index]!.difference(provider.timestamps[index + 1]!).inHours >= 3 ? Colors.green : Colors.transparent,)),
               child: ListTile(
                 title: Text(
                   DateFormat('dd.MM.yyyy - HH:mm').format(timestamp!),
